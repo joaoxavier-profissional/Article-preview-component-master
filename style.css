@@ -35,43 +35,13 @@ main {
     max-width: 600px;
 }
 
-.profile{
-    display: flex;
-    height: 5rem;
-    width: 100%;
-}
-.profile-image {
-    border-radius: 50%;
-}
-.profile > .profile-info > h2,
-.profile > .profile-info > p {
-    padding-top: 0px;
-    padding-bottom: 0px;
-    font-size: 0.85rem;
-}
-.profile-info {
-    padding-top: 0;
-    padding-bottom: 0;
-    margin-right: auto;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-.share-btn {
-    border-radius: 50%;
-    border: 0;
-    width: max-content;
-    height: max-content;
-}
-
-
 .attribution {
     display: none;
 }
 
 @media (max-width: 600px) {
     main {
+        display: grid;
         margin: 5%;
         grid-template-columns: 1fr;
     }
@@ -113,5 +83,50 @@ main {
         border: 0;
         width: max-content;
         height: max-content;
+    }
+}
+
+@media (min-width: 601px) {
+    main {
+        display: flex;
+        max-width: 900px;
+    }
+
+    main > img {
+        max-width: 350px;
+        object-fit: cover;
+    }
+
+    section {
+        margin: 2rem;
+    }
+
+    section > *:not(div) {
+        margin-bottom: 3rem;
+    }
+
+    .profile {
+        display: flex;
+    }
+
+    .profile-image {
+        width: 3.5em;
+        height: 3.5em;
+        border-radius: 50%;
+        margin-right: 1rem;
+    }
+
+    .profile-info {
+        margin-right: auto;
+    }
+
+    .share-btn {
+        border-radius: 50%;
+        border: 0;
+        width: 3.5em;
+        height: 3.5em;
+    }
+    .share-btn:hover {
+        cursor: pointer;
     }
 }
