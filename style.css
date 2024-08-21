@@ -1,0 +1,117 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 95vh;
+    background: hsl(210, 46%, 95%);
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+h1, h2 {
+    font-family: "Manrope", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: <weight>;
+    font-style: normal;
+    color: hsl(217, 19%, 35%);
+}
+
+p {
+    font-family: "Manrope", sans-serif;
+    font-weight: 500;
+    color: hsl(214, 17%, 51%);
+    line-height: 1.5em;
+}
+
+main {
+    display: grid;
+    border-radius: 10px;
+    background: white;
+    grid-template-columns: 25% 75%;
+    max-width: 600px;
+}
+
+.profile{
+    display: flex;
+    height: 5rem;
+    width: 100%;
+}
+.profile-image {
+    border-radius: 50%;
+}
+.profile > .profile-info > h2,
+.profile > .profile-info > p {
+    padding-top: 0px;
+    padding-bottom: 0px;
+    font-size: 0.85rem;
+}
+.profile-info {
+    padding-top: 0;
+    padding-bottom: 0;
+    margin-right: auto;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.share-btn {
+    border-radius: 50%;
+    border: 0;
+    width: max-content;
+    height: max-content;
+}
+
+
+.attribution {
+    display: none;
+}
+
+@media (max-width: 600px) {
+    main {
+        margin: 5%;
+        grid-template-columns: 1fr;
+    }
+    main :not(img){
+        padding: 4%;
+    }
+    main > img {
+        width: 100%;
+        border-radius: 10px 10px 00px 0px;
+    }
+    section {
+        padding-bottom: 0;
+    }
+    .profile{
+        display: flex;
+        height: 5rem;
+        width: 100%;
+    }
+    .profile-image {
+        border-radius: 50%;
+    }
+    .profile > .profile-info > h2,
+    .profile > .profile-info > p {
+        padding-top: 0px;
+        padding-bottom: 0px;
+        font-size: 0.85rem;
+    }
+    .profile-info {
+        padding-top: 0;
+        padding-bottom: 0;
+        margin-right: auto;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    .share-btn {
+        border-radius: 50%;
+        border: 0;
+        width: max-content;
+        height: max-content;
+    }
+}
