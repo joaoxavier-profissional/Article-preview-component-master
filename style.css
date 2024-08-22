@@ -35,6 +35,15 @@ main {
     max-width: 600px;
 }
 
+.active {
+    background: hsl(217, 19%, 35%);
+    color: white;
+}
+
+.hidden {
+    display: none;
+}
+
 .attribution {
     display: none;
 }
@@ -107,6 +116,7 @@ main {
 
     .profile {
         display: flex;
+        position: relative;
     }
 
     .profile-image {
@@ -118,6 +128,23 @@ main {
 
     .profile-info {
         margin-right: auto;
+    }
+
+    #share-container, #share-container .active > *{
+        position: absolute;
+        transform: translateY(-4rem);
+        left: 70%;
+        padding: 10px;
+        border-radius: 4px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        text-transform: uppercase;
+    }
+
+    #share-container > * {
+        margin: 0.5rem 1rem;
     }
 
     .share-btn {
